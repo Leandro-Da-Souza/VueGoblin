@@ -1,0 +1,14 @@
+Vue fundamentals:
+What is Vue, and how does its reactivity system work at a high level?
+
+API knowledge:
+What are the main differences between the Options API and Composition API in Vue 3? When might you choose one over the other?
+
+State management:
+I have a large Vue 3 application with state shared across many unrelated components. How should I manage this state, and when should I use Pinia instead of composables or provide/inject?
+
+Side effects / debugging:
+In a Vue 3 component, I need to run an asynchronous request whenever a reactive search query changes and prevent stale requests from updating the UI. How would you implement this? Show Vue 3 code.
+
+Vue 2 → 3 migration:
+I have a large Vue 2 application using Vuex, mixins, filters, and the Options API. How would you approach migrating it incrementally to Vue 3, and which breaking changes should I watch for?
