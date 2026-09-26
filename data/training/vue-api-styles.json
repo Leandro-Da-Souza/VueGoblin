@@ -1,0 +1,27 @@
+[
+  {
+    "id": "vue-api-styles-01",
+    "question": "How does Options API organize a component?",
+    "answer": "The Options API groups a component's logic into options such as data(), methods, computed, and watch. Inside these options, you typically access the component's state and methods through the this keyword."
+  },
+  {
+    "id": "vue-api-styles-02",
+    "question": "How does Composition API organize the same logic?",
+    "answer": "With Composition API, you can declare reactive state and functions directly inside a script setup block and arrange related logic together as you choose."
+  },
+  {
+    "id": "vue-api-styles-03",
+    "question": "How can you reuse stateful logic across components in each style?",
+    "answer": "With Options API, you can use mixins: options objects that Vue merges into a component. With Composition API, you can use composables: functions that encapsulate stateful logic for multiple components to call."
+  },
+  {
+    "id": "vue-api-styles-04",
+    "question": "Can an existing Options API component stay that way in Vue 3?",
+    "answer": "Yes. Vue 3 still supports the Options API, so an existing component does not need to be rewritten into Composition API just to migrate."
+  },
+  {
+    "id": "vue-api-styles-05",
+    "question": "When might you choose Options API over Composition API in Vue 3, or vice versa?",
+    "answer": "Options API provides predefined groups and is especially useful for simpler use cases or projects without build tools. Composition API with single-file components is recommended for full applications, where flexible organization and reusable logic become more valuable."
+  }
+]
