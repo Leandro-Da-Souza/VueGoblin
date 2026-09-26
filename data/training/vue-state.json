@@ -1,0 +1,27 @@
+[
+  {
+    "id": "vue-state-01",
+    "question": "What makes state shared rather than local to one component?",
+    "answer": "State is shared when multiple components depend on the same underlying value and need to see its updates. Local state belongs to one component instance and only needs to serve that component."
+  },
+  {
+    "id": "vue-state-02",
+    "question": "When is a composable enough for shared state?",
+    "answer": "For small, straightforward shared state in a client-side app, a composable can expose a ref created at module scope so its callers use the same value. When state and actions span several features and need more structure and tooling, Pinia is usually a better fit."
+  },
+  {
+    "id": "vue-state-03",
+    "question": "When does provide/inject fit?",
+    "answer": "When a parent owns a dependency or reactive state needed by deeply nested descendants, provide/inject can pass it down without prop drilling. For state scoped to that part of the component tree, a global store may be unnecessary."
+  },
+  {
+    "id": "vue-state-04",
+    "question": "What does Pinia add when shared state grows?",
+    "answer": "Pinia gives shared state a clear home in stores, with actions for the operations that change it. Its Vue Devtools integration helps you inspect stores and follow changes when many components depend on the same state."
+  },
+  {
+    "id": "vue-state-05",
+    "question": "Can Pinia and composables be used together?",
+    "answer": "Yes. A composable can call a Pinia store and add reusable behavior around it, such as coordinating a search request or exposing a simpler interface to components. Pinia holds the shared app state while the composable organizes the reusable logic."
+  }
+]
