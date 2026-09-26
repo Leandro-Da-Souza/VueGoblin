@@ -1,0 +1,27 @@
+[
+  {
+    "id": "vue-fundamentals-01",
+    "question": "What kind of projects can Vue be used in?",
+    "answer": "Vue can create reactive user interfaces, either as part of an existing page or as a full standalone application."
+  },
+  {
+    "id": "vue-fundamentals-02",
+    "question": "What does ref() make reactive?",
+    "answer": "ref() creates a reactive container for a value, whether it is a JavaScript primitive or an object. In JavaScript, you read or change the contained value through .value; Vue tracks those changes so code that depends on the ref can update."
+  },
+  {
+    "id": "vue-fundamentals-03",
+    "question": "How does Vue know that a template depends on a reactive value?",
+    "answer": "While rendering a component, Vue tracks which reactive values the template reads. When those values change, Vue can update the component."
+  },
+  {
+    "id": "vue-fundamentals-04",
+    "question": "I changed a reactive value, but the DOM still shows the old value on the next line. Is Vue reactivity broken?",
+    "answer": "No. The reactive value changes immediately, but Vue batches DOM updates, so the DOM may still show the old value on the next line. If you need to read the updated DOM, await nextTick() before reading it."
+  },
+  {
+    "id": "vue-fundamentals-05",
+    "question": "How does reactive() differ from ref()?",
+    "answer": "reactive() returns a reactive Proxy of an object, so you access its properties directly. ref() creates a reactive container for a primitive or object, which you access through .value in JavaScript."
+  }
+]
