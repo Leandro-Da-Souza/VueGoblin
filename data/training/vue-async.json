@@ -1,0 +1,27 @@
+[
+  {
+    "id": "vue-async-01",
+    "question": "When should you use watch() for a reactive value?",
+    "answer": "Use watch() when a change to a reactive value should trigger a side effect, such as a fetch request or logging. Vue already updates templates when reactive values change, so rendering alone does not require a watcher."
+  },
+  {
+    "id": "vue-async-02",
+    "question": "How do you start a request when a query changes?",
+    "answer": "Watch the reactive query ref and start the request inside the watcher callback, using the new query value."
+  },
+  {
+    "id": "vue-async-03",
+    "question": "Why can two requests finish in the wrong order?",
+    "answer": "Requests can overlap, and network or server delays mean they may finish in a different order from when they started. A search for 'cats' might finish before an earlier search for 'cat'; if the earlier response arrives last, it can overwrite the newer results."
+  },
+  {
+    "id": "vue-async-04",
+    "question": "How does watcher cleanup help cancel an outdated fetch?",
+    "answer": "Create an AbortController for each fetch and pass its signal to fetch. Register controller.abort() with the watch callback's onCleanup function, so Vue aborts the old request when the watcher runs again for a new query or stops."
+  },
+  {
+    "id": "vue-async-05",
+    "question": "Show a Vue 3 watch() callback that fetches data when a query ref changes and aborts the previous fetch.",
+    "answer": "watch(searchQuery, async (query, _oldQuery, onCleanup) => {\n  const controller = new AbortController();\n  onCleanup(() => controller.abort());\n\n  try {\n    const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`, {\n      signal: controller.signal,\n    });\n    results.value = await response.json();\n  } catch (error) {\n    if (error.name !== \"AbortError\") throw error;\n  }\n});\n"
+  }
+]
