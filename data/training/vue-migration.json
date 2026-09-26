@@ -1,0 +1,27 @@
+[
+  {
+    "id": "vue-migration-01",
+    "question": "Can Vuex stay during a Vue 2 → 3 migration?",
+    "answer": "Yes. Vuex 4 works with Vue 3, so migrating to Pinia is not a prerequisite for upgrading the app."
+  },
+  {
+    "id": "vue-migration-02",
+    "question": "What happens to template filters in Vue 3?",
+    "answer": "Vue 3 removed template filters and their pipe syntax. Replace their usage with ordinary function calls, methods, or computed values where appropriate."
+  },
+  {
+    "id": "vue-migration-03",
+    "question": "Must existing mixins be rewritten immediately when migrating to Vue 3?",
+    "answer": "No. Existing Options API components can continue using mixins in Vue 3. You can gradually replace mixins with composables where that improves clarity or when refactoring the affected components."
+  },
+  {
+    "id": "vue-migration-04",
+    "question": "How can @vue/compat support an incremental migration?",
+    "answer": "@vue/compat runs Vue 3 with compatibility behavior for many Vue 2 features and warns when the app relies on them. This lets you fix affected code gradually and remove compatibility behavior as the migration progresses."
+  },
+  {
+    "id": "vue-migration-05",
+    "question": "What should I audit before upgrading a large Vue 2 app to Vue 3?",
+    "answer": "Audit app startup and global registration, component APIs such as v-model, and template behavior such as v-if with v-for. Also check that dependencies like Vue Router, Vuex, UI libraries, and build tooling have Vue 3-compatible versions."
+  }
+]
